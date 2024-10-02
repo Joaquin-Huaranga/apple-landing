@@ -47,5 +47,7 @@ const Container = styled.div`
     color: #fff;
     font-weight: 500;
     font-size: 1.2em;
+    margin: 3em 2em;
+    width: 60%;
   }
 `;
