@@ -29,9 +29,7 @@ export const HeaderLayout = () => {
         <li>
           <a href="#">iPhone</a>
         </li>
-        <li>
-          <a href="#">Inicio</a>
-        </li>
+
         <li>
           <a href="#">Watch</a>
         </li>
@@ -41,9 +39,7 @@ export const HeaderLayout = () => {
         <li>
           <a href="#">AirPods</a>
         </li>
-        <li>
-          <a href="#">Inicio</a>
-        </li>
+
         <li>
           <a href="#">TV & Home</a>
         </li>
@@ -87,18 +83,22 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2.5em;
+
     li {
       padding: 0.3em 0.5em;
       font-size: 0.7em;
       font-weight: 400;
+
       a {
         text-decoration: none;
-        color: white;
+        color: rgb(255, 255, 255, 0.6);
       }
+
       .logo {
         width: auto;
-        height: 1.2em;
+        height: 1.4em;
       }
+
       .icon {
         font-size: 1em;
       }
