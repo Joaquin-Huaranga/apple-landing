@@ -69,7 +69,7 @@ const Container = styled.div`
     width: 100%;
     padding: 0 10px;
     z-index: 10;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
   }
   .title-wrapper.sticky {
     position: fixed;
