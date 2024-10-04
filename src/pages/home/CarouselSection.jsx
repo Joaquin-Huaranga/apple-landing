@@ -1,45 +1,94 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { Component1 } from "./CarouselComponents/Component1.jsx";
-import { Carouseles } from "./CarouselComponents/Carouseles.jsx";
+import {
+  Carousel1,
+  Carousel2,
+  Carousel3,
+  Carousel4,
+  Carousel5,
+  Carousel6,
+} from "./Carousels";
 
 export const CarouselSection = () => {
-  const images = [{ Component1 }];
-
-  // Configuración del slider
   const settings = {
-    dots: true, // Muestra los puntos de navegación
-    infinite: true, // Carrusel infinito
-    speed: 500, // Duración de la animación al cambiar de imagen
-    slidesToShow: 1, // Cuántas imágenes mostrar al mismo tiempo
-    slidesToScroll: 1, // Cuántas imágenes se mueven en un "scroll"
-    autoplay: true, // Habilita el desplazamiento automático
-    autoplaySpeed: 2000, // Velocidad del autoplay (en milisegundos)
+    dots: false, // Muestra puntos de navegación
+    infinite: false, // Habilita el loop
+    speed: 500, // Velocidad del cambio de imagen
+    slidesToShow: 3, // Muestra un cuadro a la vez
+    slidesToScroll: 1, // Desplaza de uno en uno
+    autoplay: false, // Habilita autoplay si lo necesitas
+    autoplaySpeed: 3000, // Velocidad del autoplay (en milisegundos)
   };
   return (
     <Container>
-      <div className="Title">
-        <h1>View recent Apple events</h1>
-      </div>
-      <Slider {...settings}>
-        {images.map((image, index) => (
-          <div key={index}>
-            <img src={image} alt={`Apple Event ${index + 1}`} />
+      <h1>View recent Apple events</h1>
+      <div
+        style={{
+          width: "95%",
+          margin: "auto",
+          padding: "1em",
+          paddingLeft: "1em",
+        }}
+      >
+        <Slider {...settings}>
+          <div>
+            <Carousel1 />
           </div>
-        ))}
-      </Slider>
+          <div>
+            <Carousel2 />
+          </div>
+          <div>
+            <Carousel3 />
+          </div>
+          <div>
+            <Carousel4 />
+          </div>
+          <div>
+            <Carousel5 />
+          </div>
+          <div>
+            <Carousel6 />
+          </div>
+        </Slider>
+      </div>
     </Container>
   );
 };
 
 const Container = styled.div`
-  .Title {
+  h1 {
+    padding-top: 5em;
     text-align: center;
-    margin-top: 8em;
-    margin-bottom: 3em;
-    font-size: 1em;
+    color: black;
+    font-size: 2.5em;
+  }
+  div {
+    padding-right: 0;
+  }
+  .slick-prev,
+  .slick-next {
+    /* Color de fondo de los botones */
+    color: gray; /* Color del texto o icono de la flecha */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Hacer los botones redondeados */
+    width: 80px; /* Ancho del botón */
+    height: 80px; /* Alto del botón */
+    display: flex;
+    justify-content: center; /* Centrar el contenido (flechas) */
+    align-items: center; /* Centrar el contenido (flechas) */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    position: absolute;
+    z-index: 1;
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  .slick-prev::before,
+  .slick-next::before {
+    font-size: 70px; /* Cambia el tamaño de las flechas */
+    color: gray; /* Color de la flecha */
   }
 `;

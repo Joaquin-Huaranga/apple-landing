@@ -7,8 +7,10 @@ const global = css`
     box-sizing: border-box;
     font-family: -apple-system, sans-serif;
   }
+
   body {
     font-size: 15px;
+    background-color: white;
   }
 `;
 
