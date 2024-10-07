@@ -1,10 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { AppleLogo } from "../image/index.js";
-import {
-  faGlasses,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
 
 export const FooterLayout = () => {
   return (

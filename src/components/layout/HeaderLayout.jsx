@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { AppleLogo } from "../image/index.js";
 import {
-  faGlasses,
   faMagnifyingGlass,
   faMagnifyingGlassChart,
 } from "@fortawesome/free-solid-svg-icons";
@@ -91,7 +90,7 @@ const Container = styled.div`
 
       a {
         text-decoration: none;
-        color: rgb(255, 255, 255, 0.6);
+        color: rgba(255, 255, 255, 0.6);
       }
 
       .logo {

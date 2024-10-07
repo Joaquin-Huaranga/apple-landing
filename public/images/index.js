@@ -6,3 +6,4 @@ export { default as Image4 } from "./image4.jpg";
 export { default as Image5 } from "./image5.jpg";
 export { default as Image6 } from "./image6.jpg";
 export { default as Image7 } from "./image7.jpg";
+export { default as Fondo } from "./fondo.avif";

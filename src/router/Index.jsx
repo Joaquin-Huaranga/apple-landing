@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Home } from "../pages";
+import { Home, HomeCart } from "../pages";
 import { BaseLayout } from "../components/layout/BaseLayout.jsx";
 
 export const Router = () => {
@@ -15,6 +15,8 @@ export const Router = () => {
           </BaseLayout>
         }
       />
+
+      <Route exact path="/Cart" element={<HomeCart />} />
       <Route path="*" element={<h1>ERROR 404 - PAGE NOT FOUND</h1>} />
     </Routes>
   );

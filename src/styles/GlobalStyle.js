@@ -10,7 +10,7 @@ const global = css`
 
   body {
     font-size: 15px;
-    background-color: white;
+    background-color: gray;
   }
 `;
 
